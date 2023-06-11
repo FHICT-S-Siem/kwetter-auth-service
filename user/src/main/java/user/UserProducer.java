@@ -14,16 +14,6 @@ public class UserProducer {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public User user(User user) {
-        // test setting test User
-//        User user = new User();
-//        user.setUserState("Unblocked");
-//        user.setName("siem");
-//        user.setEmail("siem@gmail.com");
-//        user.setNickname("siempie");
-//        user.setSub("sub");
-//        user.setPicture("pic");
-//        user.setUpdated_at("2020 ofz");
-
         // log
         Log.info(user.toString());
 

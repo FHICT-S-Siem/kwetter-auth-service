@@ -18,6 +18,8 @@ public class User extends PanacheEntity {
     private String nickname;
     private String sub;
     private String updated_at;
+    private String role;
+
 
     public Long getId() {
         return id;
@@ -76,5 +78,13 @@ public class User extends PanacheEntity {
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
