@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import java.util.Date;
 
 @Entity(name = "UserEntity")
 @NoArgsConstructor

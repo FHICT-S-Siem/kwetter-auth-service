@@ -23,8 +23,10 @@ public class UserProducer {
 //        user.setSub("sub");
 //        user.setPicture("pic");
 //        user.setUpdated_at("2020 ofz");
+
         // log
         Log.info(user.toString());
+
         // send user
         emitter.send(user);
 
