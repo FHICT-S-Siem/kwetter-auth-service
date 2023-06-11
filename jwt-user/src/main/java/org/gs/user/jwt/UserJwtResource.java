@@ -14,8 +14,6 @@ public class UserJwtResource {
     @Inject
     UserJwtService service;
 
-    // TODO: Make separate JWT endpoint for User, moderator and admin
-
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public Response getJwt() {

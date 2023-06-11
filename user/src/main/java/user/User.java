@@ -1,24 +1,34 @@
 package user;
 
-import java.text.SimpleDateFormat;
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import java.util.Date;
 
-public class User {
-
-    private Long id;
+@Entity(name = "UserEntity")
+@NoArgsConstructor
+@AllArgsConstructor
+public class User extends PanacheEntity {
+    @Column(nullable = false)
+    private String userState;
     private String name;
     private String email;
     private String picture;
     private String nickname;
     private String sub;
-//    private Date updated_at;
+    private String updated_at;
 
     public Long getId() {
         return id;
     }
+    public String getUserState() {
+        return userState;
+    }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserState(String userState) {
+        this.userState = userState;
     }
 
     public String getName() {
@@ -59,5 +69,13 @@ public class User {
 
     public void setSub(String sub) {
         this.sub = sub;
+    }
+
+    public String getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(String updated_at) {
+        this.updated_at = updated_at;
     }
 }

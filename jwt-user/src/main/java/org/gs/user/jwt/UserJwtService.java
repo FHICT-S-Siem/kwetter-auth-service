@@ -9,8 +9,6 @@ import java.util.Set;
 
 @Singleton
 public class UserJwtService {
-
-    // TODO: Generate separate JWT for User, moderator and admin
     public String generateJwt() {
 
         Set<String> roles = new HashSet<>(

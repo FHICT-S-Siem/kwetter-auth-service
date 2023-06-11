@@ -8,12 +8,12 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
-
-@Path("/api/v1/user")
+@Path("/api/v1/role")
 @ApplicationScoped
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class UserResource {
     List<User> users = new ArrayList<>();
-
     @GET
     @PermitAll
     @Produces(MediaType.APPLICATION_JSON)
@@ -25,7 +25,6 @@ public class UserResource {
     @RolesAllowed({"moderator", "admin"})
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-
     public Response addUser(User newUser) {
         users.add(newUser);
         return Response.ok(users).build();
@@ -41,4 +40,6 @@ public class UserResource {
                 .ifPresent(user -> users.remove(user));
         return Response.noContent().build();
     }
+
+
 }
